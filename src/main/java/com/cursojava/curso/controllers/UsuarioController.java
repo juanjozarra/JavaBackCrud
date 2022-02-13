@@ -46,10 +46,9 @@ public class UsuarioController {
         return user;
     }
 
-    @RequestMapping(value = "api/usuarios/delete/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "api/user/{id}", method = RequestMethod.DELETE)
     public void deleteUser(@PathVariable Long id) {
         usuarioDAO.deleteUser(id);
-
     }
 
     @RequestMapping(value = "search/user/{id}")
