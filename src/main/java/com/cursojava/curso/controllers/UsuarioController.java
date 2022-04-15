@@ -16,9 +16,9 @@ public class UsuarioController {
     private UsuarioDAO usuarioDAO;
 
 
-    @RequestMapping(value = "api/usuarios", method = RequestMethod.GET)
+    @RequestMapping(value = "api/users", method = RequestMethod.GET)
     public List<Usuario> getUsers() {
-        return usuarioDAO.getUsuarios();
+        return usuarioDAO.getUsers();
     }
 
     @RequestMapping(value = "api/edit/user", method = RequestMethod.PATCH)
@@ -31,7 +31,7 @@ public class UsuarioController {
         usuarioDAO.deleteUser(id);
     }
 
-    @RequestMapping(value = "api/add/user", method = RequestMethod.POST)
+    @RequestMapping(value = "api/add/user",method = RequestMethod.POST)
     public void addUser(@RequestBody Usuario usuario) {
         usuarioDAO.addUser(usuario);
     }
